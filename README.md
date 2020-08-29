@@ -38,7 +38,7 @@ npm start
 The `start` command will start two servers concurrently:
 
 - An API server running on `http://localhost:5000`
-- A React application server running on `http://localhost:5000`
+- A React application running on `http://localhost:3000`
 
 To stop the servers from running, you can press `Ctrl + C`.
 
