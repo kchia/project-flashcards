@@ -11,8 +11,6 @@ require("cross-fetch/polyfill");
 
 jest.mock("../utils/api");
 
-`/decks/:deckId/study`;
-
 describe("Decks", () => {
   test("route for /decks/:deckId", async () => {
     const mockDeck = {

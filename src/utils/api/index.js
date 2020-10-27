@@ -54,6 +54,8 @@ async function fetchJson(url, options) {
 
 /**
  * Retrieves all existing decks.
+ * @param signal
+ *  optional AbortController.signal
  * @returns {Promise<[deck]>}
  *  a promise that resolves to a possibly empty array of decks saved in the database.
  */
@@ -118,7 +120,7 @@ export async function updateDeck(updatedDeck, signal) {
 }
 
 /**
- * Deletes the deck with the specified deck id.
+ * Deletes the deck with the specified `deckId`.
  * @param deckId
  *  the id of the deck to delete
  * @param signal
@@ -133,7 +135,7 @@ export async function deleteDeck(deckId, signal) {
 }
 
 /**
- * Retrieves all cards associated with the specified deckId.
+ * Retrieves all cards associated with the specified `deckId`.
  * @param deckId
  *  the id of the target deck
  * @param signal
@@ -147,8 +149,8 @@ export async function listCards(deckId, signal) {
 }
 
 /**
- * Creates a new card associated with the specified deckId.
- * There is no validation that there is an existing deck with the specified deckId
+ * Creates a new card associated with the specified `deckId`.
+ * There is no validation that there is an existing deck with the specified `deckId`
  * @param deckId
  *  the id of the target deck
  * @param card
@@ -206,7 +208,7 @@ export async function updateCard(updatedCard, signal) {
 }
 
 /**
- * Deletes the card with the specified cardId.
+ * Deletes the card with the specified `cardId`.
  * @param cardId
  *  the id of the card to delete
  * @param signal
